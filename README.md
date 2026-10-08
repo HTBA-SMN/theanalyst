@@ -35,16 +35,16 @@ Experience dates written as `[Insert confirmed start date]` show in brass colour
 
 ## Images
 Put images in `assets/images/`. The profile photo is `assets/images/profile.jpg` (keep the same name, or change `photo` in `data.js`). Keep photos under about 300 KB.
-Project images are expected at `assets/images/lakeside-ai-readmission-workflow.png` and `assets/images/closed-loop-medication-workflow.png`. Until you add them, the cards show a labelled placeholder.
+Project thumbnails are `assets/images/lakeside-ai-readmission-workflow.jpg` (the hackathon cover slide) and `assets/images/closed-loop-medication-workflow.jpg`. The hackathon slides are in `assets/images/hackathon/` and appear in the case study as a view-only slide viewer.
 
-## Resume
-Replace `assets/documents/resume.pdf` with your latest CV (keep the file name, or change `resume` in `data.js`). The "View CV" and "Resume" buttons open it.
+## CV (view only)
+The CV opens in an on-page viewer built from page images, so visitors can read it but there is no download button or PDF file in the site. To update it, export each CV page as a JPG, save them as `assets/images/cv/cv-1.jpg`, `cv-2.jpg` (and so on), and list them in `cvPages` in `data.js`. Note: nothing on the web can fully stop a determined visitor from taking a screenshot.
 
 ## Add or edit a project
 1. Add your image to `assets/images/` and any document to `assets/documents/`.
 2. In `data.js`, copy one block inside `projects: [ ... ]`, paste it after a comma, and change the text. Give it a unique `id`.
 3. Each project becomes a card and a case study (problem → objective → approach → analysis → findings → recommendations → outcome → impact).
-4. Set `documentReady: true` once the BRD file is uploaded, so the download button appears. Files expected:
+4. Set `documentReady: true` once a BRD file is uploaded, so a link appears for projects that use a document. Files expected:
    - `assets/documents/Lakeside_Health_Network_BRD.docx`
    - `assets/documents/closed-loop-medication-BRD.pdf`
 

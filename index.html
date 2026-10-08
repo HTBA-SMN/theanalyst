@@ -36,7 +36,7 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li class="menu-extra"><a data-resume href="assets/documents/resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+        <li class="menu-extra"><a data-cv href="#cv">Resume</a></li>
       </ul>
     </nav>
     <div class="nav-tools">
@@ -52,14 +52,14 @@
   <section class="hero" id="home">
     <div class="wrap hero-in">
       <div class="hero-text">
-        <p class="hello">Cambridge, United Kingdom</p>
+        <p class="pill"><span class="dot" aria-hidden="true"></span><span id="h-open"></span> · <span id="h-loc"></span></p>
         <h1 id="h-name">Dr Sharon Mbacham Ngwafor</h1>
         <p class="role" id="h-title"></p>
-        <p class="lead" id="h-tagline"></p>
+        <p class="type"><span class="sr">I turn clinical insight into better healthcare processes, clear requirements, data-driven decisions and safer digital health solutions.</span><span aria-hidden="true">I turn clinical insight into <span id="typed" class="typed"></span><span class="caret"></span></span></p>
         <p class="sub" id="h-bio"></p>
         <div class="cta">
           <a class="btn primary" href="#projects">View projects</a>
-          <a class="btn" data-resume data-resume-text href="assets/documents/resume.pdf" target="_blank" rel="noopener">View CV</a>
+          <a class="btn" data-cv data-cv-text href="#cv">View CV</a>
         </div>
         <ul class="social">
           <li><a data-linkedin href="#" target="_blank" rel="noopener">LinkedIn</a></li>
@@ -68,7 +68,8 @@
         </ul>
       </div>
       <figure class="portrait">
-        <img id="h-photo" src="assets/images/profile.jpg" width="450" height="675" alt="Portrait of Dr Sharon Mbacham Ngwafor in a black blazer" fetchpriority="high">
+        <div class="frame"><img id="h-photo" src="assets/images/profile.jpg" width="720" height="900" alt="Portrait of Dr Sharon Mbacham Ngwafor in a black blazer" fetchpriority="high"></div>
+        <ul class="float-chips" id="h-chips" aria-hidden="true"></ul>
       </figure>
     </div>
   </section>
@@ -76,6 +77,7 @@
   <section id="about" class="sec">
     <div class="wrap">
       <h2>About</h2>
+      <p class="intro" id="i-about"></p>
       <div class="about-grid">
         <div class="prose" id="about-text"></div>
         <dl class="facts" id="facts"></dl>
@@ -88,6 +90,7 @@
   <section id="experience" class="sec alt">
     <div class="wrap narrow">
       <h2>Experience</h2>
+      <p class="intro" id="i-experience"></p>
       <ol class="timeline" id="timeline"></ol>
       <div class="edu">
         <div><h3 class="sub-h">Education</h3><ul class="plain" id="edu"></ul></div>
@@ -99,14 +102,15 @@
   <section id="skills" class="sec">
     <div class="wrap">
       <h2>Core competencies</h2>
+      <p class="intro" id="i-skills"></p>
       <div class="skills" id="skills-grid"></div>
     </div>
   </section>
 
   <section id="projects" class="sec alt">
     <div class="wrap">
-      <h2>Projects</h2>
-      <p class="intro">Two business analysis projects in digital health. Each case study follows the same path: problem, objective, approach, analysis, findings, recommendations, outcome and impact.</p>
+      <h2>Projects and case studies</h2>
+      <p class="intro" id="i-projects"></p>
       <div class="cards" id="cards"></div>
     </div>
   </section>
@@ -139,14 +143,22 @@
 
 <footer class="foot"><div class="wrap"><p>© <span id="yr"></span> Bih-Epety Mbacham Sharon Ngwafor</p><a href="#home">Back to top</a></div></footer>
 
-<dialog class="modal" id="modal" aria-labelledby="m-title">
+<dialog class="modal cv-modal" id="cv" aria-label="Curriculum vitae">
+  <div class="m-in">
+    <button class="m-close" id="cv-close" type="button" aria-label="Close CV">Close</button>
+    <p class="cv-note">View only</p>
+    <div id="cv-pages" class="cv-pages"></div>
+  </div>
+</dialog>
+
+<dialog class="modal wide" id="modal" aria-labelledby="m-title">
   <div class="m-in">
     <button class="m-close" id="m-close" type="button" aria-label="Close case study">Close</button>
     <div id="m-body"></div>
   </div>
 </dialog>
 
-<noscript><p style="padding:2rem;text-align:center">This portfolio uses JavaScript to display its content. Please enable it, or download my CV: <a href="assets/documents/resume.pdf">resume.pdf</a>.</p></noscript>
+<noscript><p style="padding:2rem;text-align:center">This portfolio uses JavaScript to display its content. Please enable it, or contact me at smbacham@yahoo.fr.</p></noscript>
 <script src="assets/js/data.js"></script>
 <script src="assets/js/script.js"></script>
 </body>
